@@ -18,7 +18,7 @@ namespace ThisIsBot
 
             bot.MessageReceived += Bot_MessageReceived;
 
-            bot.Connect("", "");
+            bot.Connect("..", "..");
 
             bot.Wait();
         }
