@@ -18,7 +18,7 @@ namespace ThisIsBot
 
             bot.MessageReceived += Bot_MessageReceived;
 
-            bot.Connect("..", "..");
+            bot.Connect("thisisbot@thisisdelicious.net", "break71");
 
             bot.Wait();
         }
@@ -42,14 +42,20 @@ namespace ThisIsBot
                     "**Games:**\n" +
                     "`!minecraft`\n" +
                     "`!gta5`\n" +
+                    "`!rust`\n" +
                     "\n" +
                     "Visit: `http://www.moonsquads.com/`");
+            }
+
+            if (e.Message.Text.ToLower() == "!skip")
+            {
+                e.Channel.SendMessage("Willabella is in another channel.");
+
             }
 
             if (e.Message.Text.ToLower() == "!minecraft")
             {
                 e.Channel.SendMessage("- **Minecraft**\n" +
-                    "**Server 1**\n" +
                     "-----------------------------\n" +
                     "Connect to: `mc.moonsquads.com`\n" +
                     "Leader: Sinister Rectus\n" +
@@ -66,7 +72,18 @@ namespace ThisIsBot
                     "-----------------------------\n" +
                     "Crew: Moonsquads [MOSQ]\n" +
                     "Leader: moonsquad\n" +
+                    "\n" +
                     "http://socialclub.rockstargames.com/crew/moonsquads");
+            }
+
+            if (e.Message.Text.ToLower() == "!rust")
+            {
+                e.Channel.SendMessage("- **Rust**\n" +
+                    "-----------------------------\n" +
+                    "Connect to: `51.255.193.122:28015` or search `Moonsquads` in the modded server list\n" +
+                    "Leader: AceCorba (Adam)\n" +
+                    "\n" +
+                    "Live map: http://map.playrust.io/?51.255.193.122:28015");
             }
         }
     }
